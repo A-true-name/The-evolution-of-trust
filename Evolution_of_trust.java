@@ -2,32 +2,29 @@
 /**
  * Write a description of class Evolution_of_trust here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Hamish Kaufman)
+ * @version (15/5/2023)
  */
+import java.util.Scanner; //Allows for the use of scanners.
 public class Evolution_of_trust
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class Evolution_of_trust
-     */
+
+
+
     public Evolution_of_trust()
     {
-        // initialise instance variables
-        x = 0;
-    }
+        Scanner keyboard = new Scanner(System.in);
+        int [] score = new int [20]; //Stores the score as a round goes on with each value in an array being the score for that round.
+        score[0]=0;
+        score[1]=0;
+        score[2]=0;
+        
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        
+        Scanner inputStream = new Scanner(System.in);
+        String s1;
+        
+
     }
 }
