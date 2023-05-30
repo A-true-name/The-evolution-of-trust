@@ -6,15 +6,32 @@
  * @version (15/5/2023)
  */
 import java.util.Scanner; //Allows for the use of scanners.
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
+import java.lang.Math;
+
+class Random_math {
+
+
+}
+
 public class Evolution_of_trust
 {
 
     private int x;
+    public static void main(String Random_math[])
+    {
+        // Defines how high or low it can go.
+        int max = 10;
+        int min = 1;
+        int range = max - min + 1;
 
+        for (int i = 0; i < 10; i++) {// generate random numbers within 1 to 10
+            int rand = (int)(Math.random() * range) + min;
+
+            // Output is different everytime this code is executed.
+            System.out.println(rand);
+        }
+    }
     public Evolution_of_trust()
     {
         Scanner keyboard = new Scanner(System.in);
@@ -31,15 +48,15 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
 
-      
+
         switch (x){
             case 1:System.out.println(s1);
-            break;
+                break;
             case 2:System.out.println(s2);
-            break;
+                break;
             case 4:System.out.println("Can't choose?");
             default :System.out.println(s3);
-            //break;
+                //break;
         }
         //if (
 
