@@ -5,35 +5,40 @@
  * @author (Hamish Kaufman)
  * @version (15/5/2023)
  */
+import java.util.*;  
 import java.util.Scanner; //Allows for the use of scanners.
 
-import java.lang.Math;
+import java.lang.Math; //Allows for the use of random math.
 
 class Random_math {
 
-
 }
-
 public class Evolution_of_trust
 {
 
     private int x;
-    public static void main(String Random_math[])
+
+    public static void(String[] args);{
+        Scanner sc= new Scanner(System.in);   
+        System.out.print("String");
+        String str= sc.nextLine();
+        System.out.print("Excellent:"+str);
+    }
+
+
+    public Evolution_of_trust()
     {
-        // Defines how high or low it can go.
+        // Defines how high or low The number of rounds will be.
         int max = 10;
         int min = 1;
         int range = max - min + 1;
 
-        for (int i = 0; i < 10; i++) {// generate random numbers within 1 to 10
+        for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
             int rand = (int)(Math.random() * range) + min;
 
             // Output is different everytime this code is executed.
             System.out.println(rand);
         }
-    }
-    public Evolution_of_trust()
-    {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         int x=keyboard.nextInt();
@@ -48,6 +53,11 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
 
+        //if(){
+        System.out.println("It's working");
+
+        
+        //}
 
         switch (x){
             case 1:System.out.println(s1);
