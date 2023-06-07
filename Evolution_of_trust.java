@@ -18,27 +18,32 @@ public class Evolution_of_trust
 
     private int x;
 
-    public static void(String[] args);{
-        Scanner sc= new Scanner(System.in);   
-        System.out.print("String");
-        String str= sc.nextLine();
-        System.out.print("Excellent:"+str);
-    }
+    //public static void String (){
+        //Scanner sc= new Scanner(System.in);   
+        //System.out.print("String");
+        //String str= sc.nextLine();
+        //System.out.print("Excellent:"+str);
+    ///}
 
 
     public Evolution_of_trust()
     {
         // Defines how high or low The number of rounds will be.
-        int max = 10;
-        int min = 1;
+        int max = 10;//Max amount of rounds.
+        int min = 1;//Lowest amount of rounds
         int range = max - min + 1;
 
-        for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
+        for (int i = 0; i < 5; i++) {// generate random numbers within 1 to 10
             int rand = (int)(Math.random() * range) + min;
 
             // Output is different everytime this code is executed.
             System.out.println(rand);
         }
+        Scanner sc= new Scanner(System.in);   
+        System.out.print("String");
+        String str= sc.nextLine();
+        System.out.print("Excellent:"+str);
+        
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         int x=keyboard.nextInt();
