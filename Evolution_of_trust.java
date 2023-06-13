@@ -17,14 +17,14 @@ public class Evolution_of_trust
 {
 
     private int x;
+    private int a;
 
     //public static void String (){
-        //Scanner sc= new Scanner(System.in);   
-        //System.out.print("String");
-        //String str= sc.nextLine();
-        //System.out.print("Excellent:"+str);
+    //Scanner sc= new Scanner(System.in);   
+    //System.out.print("String");
+    //String str= sc.nextLine();
+    //System.out.print("Excellent:"+str);
     ///}
-
 
     public Evolution_of_trust()
     {
@@ -32,7 +32,7 @@ public class Evolution_of_trust
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
         int range = max - min + 1;
-
+        boolean Main_Game = true;
         for (int i = 0; i < 5; i++) {// generate random numbers within 1 to 10
             int rand = (int)(Math.random() * range) + min;
 
@@ -43,7 +43,7 @@ public class Evolution_of_trust
         System.out.print("String");
         String str= sc.nextLine();
         System.out.print("Excellent:"+str);
-        
+
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         int x=keyboard.nextInt();
@@ -61,19 +61,21 @@ public class Evolution_of_trust
         //if(){
         System.out.println("It's working");
 
-        
         //}
+        while (Main_Game) {
 
-        switch (x){
-            case 1:System.out.println(s1);
-                break;
-            case 2:System.out.println(s2);
-                break;
-            case 4:System.out.println("Can't choose?");
-            default :System.out.println(s3);
-                //break;
+            
         }
-        //if (
-
+            switch (x){
+                case 1:System.out.println(s1);
+                    break;
+                case 2:System.out.println(s2);
+                    break;
+                case 4:System.out.println("Can't choose?");
+                default :System.out.println(s3);
+                    //break;
+            }
+            //if (
+        
     }
 }
