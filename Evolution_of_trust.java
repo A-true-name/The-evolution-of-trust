@@ -36,16 +36,14 @@ public class Evolution_of_trust
         boolean Main_Game = true;
         boolean cooperate = true;
         //public int
-        for (int i = 0; i < 5; i++) {// generate random numbers within 1 to 10
+        for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
             int rand = (int)(Math.random() * range) + min;
 
             // Output is different everytime this code is executed.
             System.out.println(rand);
         }
-        while (Main_Game) {
+        
 
-
-        }
         Scanner sc= new Scanner(System.in);   
         System.out.print("String");
         String str= sc.nextLine();
@@ -81,6 +79,9 @@ public class Evolution_of_trust
                     //break;
             }
             //if (
-        
+                while (Main_Game) {
+
+
+        }
     }
 }
