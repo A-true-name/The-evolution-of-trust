@@ -16,8 +16,9 @@ class Random_math {
 public class Evolution_of_trust
 {
 
-    private int x;
-    private int a;
+    public int x;
+    public int a;
+    public int Cooperate;
 
     //public static void String (){
     //Scanner sc= new Scanner(System.in);   
@@ -33,11 +34,17 @@ public class Evolution_of_trust
         int min = 1;//Lowest amount of rounds
         int range = max - min + 1;
         boolean Main_Game = true;
+        boolean cooperate = true;
+        //public int
         for (int i = 0; i < 5; i++) {// generate random numbers within 1 to 10
             int rand = (int)(Math.random() * range) + min;
 
             // Output is different everytime this code is executed.
             System.out.println(rand);
+        }
+        while (Main_Game) {
+
+
         }
         Scanner sc= new Scanner(System.in);   
         System.out.print("String");
@@ -58,20 +65,18 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
 
-        //if(){
-        System.out.println("It's working");
+        if(cooperate){
+            System.out.println("It's working");
 
-        //}
-        while (Main_Game) {
-
-            
         }
+
             switch (x){
                 case 1:System.out.println(s1);
                     break;
                 case 2:System.out.println(s2);
                     break;
                 case 4:System.out.println("Can't choose?");
+                    break;
                 default :System.out.println(s3);
                     //break;
             }
