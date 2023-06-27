@@ -5,6 +5,10 @@
  * @author (Hamish Kaufman)
  * @version (15/5/2023)
  */
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;  
 import java.util.Scanner; //Allows for the use of scanners.
 import javafx.application.Preloader.StateChangeNotification;
@@ -27,10 +31,12 @@ public class Evolution_of_trust
     //String str= sc.nextLine();
     //System.out.print("Excellent:"+str);
     ///}
+    
 
     public Evolution_of_trust()
     {
-        boolean Main_Game = true;
+        boolean Main_Game = true; //Let's the Main+game while function work. 
+        boolean cooperate = true;
         // Defines how high or low The number of rounds will be.
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
@@ -40,7 +46,6 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
 
-        boolean cooperate = true;
         //public int
         for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
             int round = (int)(Math.random() * range) + min;
@@ -60,10 +65,12 @@ public class Evolution_of_trust
             System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
             int x=keyboard.nextInt();
             Scanner inputStream = new Scanner(System.in);
-            String s1,s2,s3;
+            String s1,s2,s3,Cooperate,Cheat;
             s1="Cooperate";
             s2="Cheat";
             s3="Random";
+            Cooperate="Cooperate";
+            Cheat="Cheat";
 
             if(cooperate){
                 System.out.println("It's working");
