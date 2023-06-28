@@ -5,7 +5,7 @@
  * @author (Hamish Kaufman)
  * @version (15/5/2023)
  */
- 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,14 +24,13 @@ public class Evolution_of_trust
     public int x;
     public int a;
     public int Cooperate;
-
+    public int Cooperate_or_cheat;
     //public static void String (){
     //Scanner sc= new Scanner(System.in);   
     //System.out.print("String");
     //String str= sc.nextLine();
     //System.out.print("Excellent:"+str);
     ///}
-    
 
     public Evolution_of_trust()
     {
@@ -45,8 +44,9 @@ public class Evolution_of_trust
         score[0]=0;
         score[1]=0;
         score[2]=0;
-
+        System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         //public int
+        System.out.println("Cooperate or Cheat");
         for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
             int round = (int)(Math.random() * range) + min;
 
@@ -56,38 +56,50 @@ public class Evolution_of_trust
 
         while (Main_Game) {// So game can always be running.
 
-            Scanner sc= new Scanner(System.in);   
-            System.out.print("String");
-            String str= sc.nextLine();
-            System.out.print("Excellent:"+str);
+            Scanner sc= new Scanner(System.in); 
+            
+            String Cooperate_or_cheat = sc.next();
+            switch (Cooperate_or_cheat) {
+                case "Cooperate":
+                    System.out.println("Cooperate");
+                    break;
+                        case "Cheat":
+                    System.out.println("Cheat");
+                
+                
+            
+            //Scanner sc= new Scanner(System.in);   
+                //System.out.print("String");
+                //String str= sc.nextLine();
+                //System.out.print(str);
 
-            Scanner keyboard = new Scanner(System.in);
-            System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
-            int x=keyboard.nextInt();
-            Scanner inputStream = new Scanner(System.in);
-            String s1,s2,s3,Cooperate,Cheat;
-            s1="Cooperate";
-            s2="Cheat";
-            s3="Random";
-            Cooperate="Cooperate";
-            Cheat="Cheat";
+                //Scanner keyboard = new Scanner(System.in);
 
+                // x=keyboard.nextInt();
+                //Scanner inputStream = new Scanner(System.in);
+                //String s1,s2,s3,Cooperate,Cheat;
+                //s1="Cooperate";
+                //s2="Cheat";
+                //s3="Random";
+                //Cooperate="Cooperate";
+                //Cheat="Cheat";
+            }
             if(cooperate){
-                System.out.println("It's working");
-                int round = -1;
+           
 
             }
-            switch (x){
-                case 1:System.out.println(s1);
-                    break;
-                case 2:System.out.println(s2);
-                    break;
-                case 4:System.out.println("Can't choose?");
-                    break;
-                default :System.out.println(s3);
-                    //break;
-            }
+            //switch (x){
+            //   case 1:System.out.println(s1);
+            ///       break;
+            //   case 2:System.out.println(s2);
+            //       break;
+            //    default :System.out.println(s3);
+            //        //break;
+            //}
+
+  
 
         }
+
     }
 }
