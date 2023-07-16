@@ -44,48 +44,49 @@ public class Evolution_of_trust
         score[0]=0;
         score[1]=0;
         score[2]=0;
+        int points=0;
         System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         //public int
         System.out.println("Cooperate or Cheat");
-        for (int i = 0; i < 1; i++) {// generate random numbers within 1 to 10
-            int round = (int)(Math.random() * range) + min;
 
-            // Output is different everytime this code is executed.
-            System.out.println(round);
-        }
+        int round = (int)(Math.random() * range) + min;
+
+        // Output is different everytime this code is executed.
+        System.out.println(round);
 
         while (Main_Game) {// So game can always be running.
-
             Scanner sc= new Scanner(System.in); 
-            
             String Cooperate_or_cheat = sc.next();
+            
             switch (Cooperate_or_cheat) {
                 case "Cooperate":
                     System.out.println("Cooperate");
                     break;
-                        case "Cheat":
+                case "Cheat":
                     System.out.println("Cheat");
-                
-                
-            
-            //Scanner sc= new Scanner(System.in);   
-                //System.out.print("String");
-                //String str= sc.nextLine();
-                //System.out.print(str);
 
-                //Scanner keyboard = new Scanner(System.in);
+                    //Scanner sc= new Scanner(System.in);   
+                    //System.out.print("String");
+                    //String str= sc.nextLine();
+                    //System.out.print(str);
 
-                // x=keyboard.nextInt();
-                //Scanner inputStream = new Scanner(System.in);
-                //String s1,s2,s3,Cooperate,Cheat;
-                //s1="Cooperate";
-                //s2="Cheat";
-                //s3="Random";
-                //Cooperate="Cooperate";
-                //Cheat="Cheat";
+                    //Scanner keyboard = new Scanner(System.in);
+
+                    // x=keyboard.nextInt();
+                    //Scanner inputStream = new Scanner(System.in);
+                    //String s1,s2,s3,Cooperate,Cheat;
+                    //s1="Cooperate";
+                    //s2="Cheat";
+                    //s3="Random";
+                    //Cooperate="Cooperate";
+                    //Cheat="Cheat";
             }
             if(cooperate){
-           
+                points =3;
+                points =4;
+                System.out.println(points);
+                
+                
 
             }
             //switch (x){
@@ -97,9 +98,8 @@ public class Evolution_of_trust
             //        //break;
             //}
 
-  
-
         }
+        //static (Always_cheats){//An ai that always cheats in response to your actions.
 
     }
 }
