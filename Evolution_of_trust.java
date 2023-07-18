@@ -25,6 +25,7 @@ public class Evolution_of_trust
     public int a;
     public int Cooperate;
     public int Cooperate_or_cheat;
+    
     //public static void String (){
     //Scanner sc= new Scanner(System.in);   
     //System.out.print("String");
@@ -35,7 +36,9 @@ public class Evolution_of_trust
     public Evolution_of_trust()
     {
         boolean Main_Game = true; //Let's the Main+game while function work. 
-        boolean cooperate = true;
+    
+        boolean cooperate = false;
+        
         // Defines how high or low The number of rounds will be.
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
@@ -45,7 +48,7 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
         int points=0;
-        System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
+        //System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         //public int
         System.out.println("Cooperate or Cheat");
 
@@ -59,10 +62,10 @@ public class Evolution_of_trust
             String Cooperate_or_cheat = sc.next();
             
             switch (Cooperate_or_cheat) {
-                case "Cooperate":
+                case "cooperate":
                     System.out.println("Cooperate");
                     break;
-                case "Cheat":
+                case "cheat":
                     System.out.println("Cheat");
 
                     //Scanner sc= new Scanner(System.in);   
@@ -81,10 +84,10 @@ public class Evolution_of_trust
                     //Cooperate="Cooperate";
                     //Cheat="Cheat";
             }
-            if(cooperate){
-                points =3;
-                points =4;
-                System.out.println(points);
+            if(cooperate==true){
+                points=+4;
+                
+                System.out.println("Very epic score"+ points);
                 
                 
 
