@@ -25,7 +25,7 @@ public class Evolution_of_trust
     public int a;
     public int Cooperate;
     public int Cooperate_or_cheat;
-    
+
     //public static void String (){
     //Scanner sc= new Scanner(System.in);   
     //System.out.print("String");
@@ -36,9 +36,10 @@ public class Evolution_of_trust
     public Evolution_of_trust()
     {
         boolean Main_Game = true; //Let's the Main+game while function work. 
-    
+
         boolean cooperate = false;
-        
+        boolean cheat = false;
+
         // Defines how high or low The number of rounds will be.
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
@@ -60,36 +61,42 @@ public class Evolution_of_trust
         while (Main_Game) {// So game can always be running.
             Scanner sc= new Scanner(System.in); 
             String Cooperate_or_cheat = sc.next();
-            
+
             switch (Cooperate_or_cheat) {
                 case "cooperate":
                     System.out.println("Cooperate");
+                    cooperate=true;
                     break;
                 case "cheat":
                     System.out.println("Cheat");
+                    cheat=true;
 
-                    //Scanner sc= new Scanner(System.in);   
-                    //System.out.print("String");
-                    //String str= sc.nextLine();
-                    //System.out.print(str);
+                        //Scanner sc= new Scanner(System.in);   
+                        //System.out.print("String");
+                        //String str= sc.nextLine();
+                        //System.out.print(str);
 
-                    //Scanner keyboard = new Scanner(System.in);
+                        //Scanner keyboard = new Scanner(System.in);
 
-                    // x=keyboard.nextInt();
-                    //Scanner inputStream = new Scanner(System.in);
-                    //String s1,s2,s3,Cooperate,Cheat;
-                    //s1="Cooperate";
-                    //s2="Cheat";
-                    //s3="Random";
-                    //Cooperate="Cooperate";
-                    //Cheat="Cheat";
+                        // x=keyboard.nextInt();
+                        //Scanner inputStream = new Scanner(System.in);
+                        //String s1,s2,s3,Cooperate,Cheat;
+                        //s1="Cooperate";
+                        //s2="Cheat";
+                        //s3="Random";
+                        //Cooperate="Cooperate";
+                        //Cheat="Cheat";
             }
             if(cooperate==true){
                 points=+4;
-                
-                System.out.println("Very epic score"+ points);
-                
-                
+
+                System.out.println(points);
+
+
+            }
+            if(cheat==true){
+            
+            
 
             }
             //switch (x){
