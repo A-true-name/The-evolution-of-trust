@@ -20,6 +20,7 @@ class Random_math {
 }
 public class Evolution_of_trust
 {
+    
 
     public int x;
     public int a;
@@ -67,9 +68,24 @@ public class Evolution_of_trust
                     System.out.println("Cooperate");
                     cooperate=true;
                     break;
-                case "cheat":
+                    
+                case "Cooperate":
+                    System.out.println("Cooperate");
+                    cooperate=true;
+                    break;
+                    
+                case "cheat": //Lower case variant
                     System.out.println("Cheat");
                     cheat=true;
+                    break;
+                    
+                case "Cheat": //If the person happens to press shift at the start of typing the word.
+                    System.out.println("Cheat");
+                    cheat=true;
+                    
+                    default:
+                        System.out.println("Type cheat or cooperate to choose");
+                        
 
                         //Scanner sc= new Scanner(System.in);   
                         //System.out.print("String");
