@@ -3,12 +3,12 @@
  * Write a description of class Evolution_of_trust here.
  *
  * @author (Hamish Kaufman)
- * @version (15/5/2023)
+ * @version (24/7/2023)
  */
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStreamReader; 
 import java.util.*;  
 import java.util.Scanner; //Allows for the use of scanners.
 import javafx.application.Preloader.StateChangeNotification;
@@ -16,11 +16,9 @@ import javafx.application.Preloader.StateChangeNotification;
 import java.lang.Math; //Allows for the use of random math.
 
 class Random_math {
-
 }
 public class Evolution_of_trust
 {
-    
 
     public int x;
     public int a;
@@ -40,6 +38,8 @@ public class Evolution_of_trust
 
         boolean cooperate = false;
         boolean cheat = false;
+        boolean ai_cooperate = false;
+        boolean ai_cheat = false;
 
         // Defines how high or low The number of rounds will be.
         int max = 10;//Max amount of rounds.
@@ -50,6 +50,7 @@ public class Evolution_of_trust
         score[1]=0;
         score[2]=0;
         int points=0;
+        int ai_points=0;
         //System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         //public int
         System.out.println("Cooperate or Cheat");
@@ -67,53 +68,68 @@ public class Evolution_of_trust
                 case "cooperate":
                     System.out.println("Cooperate");
                     cooperate=true;
+                    cheat=false;
                     break;
-                    
+
                 case "Cooperate":
                     System.out.println("Cooperate");
                     cooperate=true;
+                    cheat=false;
                     break;
-                    
+
                 case "cheat": //Lower case variant
                     System.out.println("Cheat");
+                    cooperate=false;
                     cheat=true;
                     break;
-                    
+
                 case "Cheat": //If the person happens to press shift at the start of typing the word.
                     System.out.println("Cheat");
+                    cooperate=false;
                     cheat=true;
-                    
-                    default:
-                        System.out.println("Type cheat or cooperate to choose");
-                        
 
-                        //Scanner sc= new Scanner(System.in);   
-                        //System.out.print("String");
-                        //String str= sc.nextLine();
-                        //System.out.print(str);
+                default:
+                    System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
+                    System.out.println("Type cheat or cooperate to choose"); // Tells player how to play 
 
-                        //Scanner keyboard = new Scanner(System.in);
+                    //Scanner sc= new Scanner(System.in);   
+                    //System.out.print("String");
+                    //String str= sc.nextLine();
+                    //System.out.print(str);
 
-                        // x=keyboard.nextInt();
-                        //Scanner inputStream = new Scanner(System.in);
-                        //String s1,s2,s3,Cooperate,Cheat;
-                        //s1="Cooperate";
-                        //s2="Cheat";
-                        //s3="Random";
-                        //Cooperate="Cooperate";
-                        //Cheat="Cheat";
+                    //Scanner keyboard = new Scanner(System.in);
+
+                    // x=keyboard.nextInt();
+                    //Scanner inputStream = new Scanner(System.in);
+                    //String s1,s2,s3,Cooperate,Cheat;
+                    //s1="Cooperate";
+                    //s2="Cheat";
+                    //s3="Random";
+                    //Cooperate="Cooperate";
+                    //Cheat="Cheat";
             }
+            points++;
+            ai_points++;
             if(cooperate==true){
-                points=+4;
+                points+=2;
+                
 
                 System.out.println(points);
 
-
             }
             if(cheat==true){
-            
-            
+                points+=3;
+                
 
+            }
+            if(ai_cooperate=true){
+                
+            }
+            if(ai_cheat==true){
+                points+=3;
+                
+
+            }
             }
             //switch (x){
             //   case 1:System.out.println(s1);
@@ -125,7 +141,12 @@ public class Evolution_of_trust
             //}
 
         }
-        //static (Always_cheats){//An ai that always cheats in response to your actions.
+        class Always_cheat_ai
+        {
+            //static (Always_cheats){//An ai that always cheats in response to your actions.
 
+        }
     }
+
+
 }
