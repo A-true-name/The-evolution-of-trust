@@ -115,38 +115,40 @@ public class Evolution_of_trust
                 
 
                 System.out.println(points);
-
             }
             if(cheat==true){
                 points+=3;
-                
+                ai_points-=1;
 
             }
             if(ai_cooperate=true){
+                ai_points+=2; 
                 
+
             }
             if(ai_cheat==true){
                 points+=3;
-                
 
             }
-            }
-            //switch (x){
-            //   case 1:System.out.println(s1);
-            ///       break;
-            //   case 2:System.out.println(s2);
-            //       break;
-            //    default :System.out.println(s3);
-            //        //break;
-            //}
-
+            
         }
-        class Always_cheat_ai
-        {
-            //static (Always_cheats){//An ai that always cheats in response to your actions.
+        //switch (x){
+        //   case 1:System.out.println(s1);
+        ///       break;
+        //   case 2:System.out.println(s2);
+        //       break;
+        //    default :System.out.println(s3);
+        //        //break;
+        //}
 
-        }
     }
+    
+    class Always_cheat_ai
+    {
+        
+        
+        
 
-
+    }
 }
+
