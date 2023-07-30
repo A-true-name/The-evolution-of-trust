@@ -15,8 +15,7 @@ import javafx.application.Preloader.StateChangeNotification;
 
 import java.lang.Math; //Allows for the use of random math.
 
-class Random_math {
-}
+
 public class Evolution_of_trust
 {
 
@@ -112,7 +111,6 @@ public class Evolution_of_trust
             ai_points++;
             if(cooperate==true){
                 points+=2;
-                
 
                 System.out.println(points);
             }
@@ -121,16 +119,15 @@ public class Evolution_of_trust
                 ai_points-=1;
 
             }
-            if(ai_cooperate=true){
+            if(ai_cooperate==true){
                 ai_points+=2; 
-                
 
             }
             if(ai_cheat==true){
                 points+=3;
 
             }
-            
+
         }
         //switch (x){
         //   case 1:System.out.println(s1);
@@ -140,15 +137,13 @@ public class Evolution_of_trust
         //    default :System.out.println(s3);
         //        //break;
         //}
+        
+        {
+            if(cheat==true){
 
-    }
-    
-    class Always_cheat_ai
-    {
-        
-        
-        
+            }
 
+        }
     }
+
 }
-
