@@ -62,6 +62,7 @@ public class Evolution_of_trust
         while (Main_Game) {// So game can always be running.
             Scanner sc= new Scanner(System.in); 
             String Cooperate_or_cheat = sc.next();
+            String ai_Cooperate_or_cheat = sc.next();
 
             switch (Cooperate_or_cheat) {
                 case "cooperate":
@@ -92,6 +93,8 @@ public class Evolution_of_trust
                     System.out.println("Type cheat or cooperate to choose"); // Tells player how to play 
 
             }
+
+ 
             switch (ai_Cooperate_or_cheat) {
                 case "ai_cooperate":
                     System.out.println("ai_Cooperate");
@@ -115,7 +118,6 @@ public class Evolution_of_trust
                     System.out.println("ai_Cheat");
                     ai_cooperate=false;
                     ai_cheat=true;
-                  
 
                 default:
                     System.out.println("Type ai_cheat or ai_cooperate to make the choice for the ai."); // Tells player how to play 
@@ -131,12 +133,10 @@ public class Evolution_of_trust
             }
             if(cheat&&ai_cheat==true){
 
-                
             }
             if(cheat&&ai_cooperate==true){
                 points+=3;
                 ai_points-=1;
-
 
             }
             if(cooperate&&ai_cheat==true){
