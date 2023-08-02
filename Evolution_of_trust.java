@@ -15,7 +15,6 @@ import javafx.application.Preloader.StateChangeNotification;
 
 import java.lang.Math; //Allows for the use of random math.
 
-
 public class Evolution_of_trust
 {
 
@@ -87,36 +86,27 @@ public class Evolution_of_trust
                     cooperate=false;
                     cheat=true;
 
+
                 default:
                     System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
                     System.out.println("Type cheat or cooperate to choose"); // Tells player how to play 
 
-                    //Scanner sc= new Scanner(System.in);   
-                    //System.out.print("String");
-                    //String str= sc.nextLine();
-                    //System.out.print(str);
-
-                    //Scanner keyboard = new Scanner(System.in);
-
-                    // x=keyboard.nextInt();
-                    //Scanner inputStream = new Scanner(System.in);
-                    //String s1,s2,s3,Cooperate,Cheat;
-                    //s1="Cooperate";
-                    //s2="Cheat";
-                    //s3="Random";
-                    //Cooperate="Cooperate";
-                    //Cheat="Cheat";
             }
             points++;
             ai_points++;
-            if(cooperate==true){
+            if(cooperate&&ai_cooperate==true){
                 points+=2;
+                ai_points+=2;
 
                 System.out.println(points);
+                System.out.println(ai_points);
             }
             if(cheat==true){
                 points+=3;
                 ai_points-=1;
+            // }else if{ (ai_cheat==true)
+            //     system.println("Both cheat")
+                
 
             }
             if(ai_cooperate==true){
@@ -129,21 +119,12 @@ public class Evolution_of_trust
             }
 
         }
-        //switch (x){
-        //   case 1:System.out.println(s1);
-        ///       break;
-        //   case 2:System.out.println(s2);
-        //       break;
-        //    default :System.out.println(s3);
-        //        //break;
+       // if 
+
+        //class Ai_always_cheat { 
+        //        if 
+            
+            
         //}
-        
-        {
-            if(cheat==true){
-
-            }
-
-        }
     }
-
 }
