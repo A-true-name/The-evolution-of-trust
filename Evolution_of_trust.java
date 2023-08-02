@@ -22,6 +22,7 @@ public class Evolution_of_trust
     public int a;
     public int Cooperate;
     public int Cooperate_or_cheat;
+    public int ai_Cooperate_or_cheat;//To allow use of manually using the ai through human hands for testing.
 
     //public static void String (){
     //Scanner sc= new Scanner(System.in);   
@@ -86,11 +87,38 @@ public class Evolution_of_trust
                     cooperate=false;
                     cheat=true;
 
-
                 default:
                     System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
                     System.out.println("Type cheat or cooperate to choose"); // Tells player how to play 
 
+            }
+            switch (ai_Cooperate_or_cheat) {
+                case "ai_cooperate":
+                    System.out.println("ai_Cooperate");
+                    ai_cooperate=true;
+                    ai_cheat=false;
+                    break;
+
+                case "ai_Cooperate":
+                    System.out.println("ai_Cooperate");
+                    ai_cooperate=true;
+                    ai_cheat=false;
+                    break;
+
+                case "ai_cheat": //Lower case variant
+                    System.out.println("ai_Cheat");
+                    ai_cooperate=false;
+                    ai_cheat=true;
+                    break;
+
+                case "ai_Cheat": //If the person happens to press shift at the start of typing the word.
+                    System.out.println("ai_Cheat");
+                    ai_cooperate=false;
+                    ai_cheat=true;
+                  
+
+                default:
+                    System.out.println("Type ai_cheat or ai_cooperate to make the choice for the ai."); // Tells player how to play 
             }
             points++;
             ai_points++;
@@ -101,30 +129,28 @@ public class Evolution_of_trust
                 System.out.println(points);
                 System.out.println(ai_points);
             }
-            if(cheat==true){
+            if(cheat&&ai_cheat==true){
+
+                
+            }
+            if(cheat&&ai_cooperate==true){
                 points+=3;
                 ai_points-=1;
-            // }else if{ (ai_cheat==true)
-            //     system.println("Both cheat")
-                
+
 
             }
-            if(ai_cooperate==true){
-                ai_points+=2; 
-
-            }
-            if(ai_cheat==true){
-                points+=3;
+            if(cooperate&&ai_cheat==true){
+                points-=1;
+                ai_points+=3;
 
             }
 
         }
-       // if 
+        // if 
 
         //class Ai_always_cheat { 
         //        if 
-            
-            
+
         //}
     }
 }
