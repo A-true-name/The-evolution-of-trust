@@ -39,6 +39,7 @@ public class Evolution_of_trust
         boolean cheat = false;
         boolean ai_cooperate = false;
         boolean ai_cheat = false;
+        //boolean help = false;
 
         // Defines how high or low The number of rounds will be.
         int max = 10;//Max amount of rounds.
@@ -52,7 +53,7 @@ public class Evolution_of_trust
         int ai_points=0;
         //System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat"); 
         //public int
-        System.out.println("Cooperate or Cheat");
+        System.out.println("This is the prisoner's dilemna aganist a bot if you don't not know how to play prisoner's dilemna type help");
 
         int round = (int)(Math.random() * range) + min;
 
@@ -87,6 +88,20 @@ public class Evolution_of_trust
                     System.out.println("Cheat");
                     cooperate=false;
                     cheat=true;
+                    break;
+                    
+ //               case "Help":
+ //               System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
+ //               System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
+//                help=true;
+//                break;
+                
+////                case "help":
+//                    System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
+ //                   System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
+ //                   help=true;
+ //                   break;
+                    
 
                 default:
                     System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
@@ -94,7 +109,6 @@ public class Evolution_of_trust
 
             }
 
- 
             switch (ai_Cooperate_or_cheat) {
                 case "ai_cooperate":
                     System.out.println("ai_Cooperate");
@@ -146,6 +160,7 @@ public class Evolution_of_trust
             }
 
         }
+
         // if 
 
         //class Ai_always_cheat { 
