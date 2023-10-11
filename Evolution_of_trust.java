@@ -33,12 +33,13 @@ public class Evolution_of_trust
 
     public Evolution_of_trust()
     {
-        boolean Main_Game = true; //Let's the Main+game while function work. 
+        boolean player = true; //Let's the Main+game while function work. 
 
         boolean cooperate = false;
         boolean cheat = false;
         boolean ai_cooperate = false;
         boolean ai_cheat = false;
+        boolean Random_ai = false;
         //boolean help = false;
 
         // Defines how high or low The number of rounds will be.
@@ -60,7 +61,7 @@ public class Evolution_of_trust
         // Output is different everytime this code is executed.
         System.out.println(round);
 
-        while (Main_Game) {// So game can always be running.
+        while (player) {// So game can always be running.
             Scanner sc= new Scanner(System.in); 
             String Cooperate_or_cheat = sc.next();
             String ai_Cooperate_or_cheat = sc.next();
@@ -89,19 +90,18 @@ public class Evolution_of_trust
                     cooperate=false;
                     cheat=true;
                     break;
-                    
- //               case "Help":
- //               System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
- //               System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
-//                help=true;
-//                break;
-                
-////                case "help":
-//                    System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
- //                   System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
- //                   help=true;
- //                   break;
-                    
+
+                    //               case "Help":
+                    //               System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
+                    //               System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
+                    //                help=true;
+                    //                break;
+
+                    ////                case "help":
+                    //                    System.out.println("Prisoner's dilemna is a game where you either cheat or cooperate."); 
+                    //                   System.out.println("And Evolution of trust Choosing to cooperate and trust the other person that'll also cooperate or you can sabotage them and cheat.");
+                    //                   help=true;
+                    //                   break;
 
                 default:
                     System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
@@ -161,11 +161,11 @@ public class Evolution_of_trust
 
         }
 
-        // if 
+        while (Random_ai) {
+            if (cheat=true)
+                Math.random(); 
+            
 
-        //class Ai_always_cheat { 
-        //        if 
-
-        //}
+        }
     }
 }
