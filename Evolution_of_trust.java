@@ -65,8 +65,11 @@ public class Evolution_of_trust
 
         while (Game) {// So game can always be running.
             Scanner sc= new Scanner(System.in);
+            System.out.println("player_Cooperate_or_cheat");
             String Cooperate_or_cheat = sc.next();
+            System.out.println("ai_Cooperate_or_cheat");
             String ai_Cooperate_or_cheat = sc.next();
+            
 
             switch (Cooperate_or_cheat) {
                 case "cooperate":
@@ -112,18 +115,17 @@ public class Evolution_of_trust
                     //System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
                     //System.out.println("Type cheat or cooperate to choose"); // Tells player how to play
 
+            }// End of switch
+            while (Kind_ai==true) {
+                if (cooperate==true) {
+                    ai_cooperate = true;
+                }
+                if (cheat==true) {
+                    ai_cooperate=true;
+
+                }
             }
-            //while (Kind_ai==true) {
-            //    if (cooperate==true) {
-            //        ai_cooperate = true;
-            // }
-            //   if (cheat==true) {
-            //         ai_cooperate=true;
-            //
-            //    }
-
-            //}
-
+            
 
             switch (ai_Cooperate_or_cheat) {
                 case "ai_cooperate":
@@ -162,8 +164,8 @@ public class Evolution_of_trust
 
                 System.out.println(points+" Your points");
                 System.out.println(ai_points+" Opponent's points.");
-                //cooperate=false;
-                //ai_cooperate=false;
+                cooperate=false;
+                ai_cooperate=false;
             }
             if(cheat&&ai_cheat==true){ //No one gains anything
                 System.out.println(points+" Your points");
@@ -176,8 +178,8 @@ public class Evolution_of_trust
 
                 System.out.println(points+" Your points");
                 System.out.println(ai_points+" Opponent's points.");
-                //cheat=false;
-                //ai_cooperate=false;
+                cheat=false;
+                ai_cooperate=false;
 
             }
             if(cooperate&&ai_cheat==true){ //Player loses 1 point and ai gains 3 points.
@@ -186,12 +188,12 @@ public class Evolution_of_trust
 
                 System.out.println(points+" Your points");
                 System.out.println(ai_points+" Opponent's points.");
-                //cooperate=false;
-                //ai_cheat=false;
+                cooperate=false;
+                ai_cheat=false;
 
             }
 
         }
-
     }
 }
+
