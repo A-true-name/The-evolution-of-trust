@@ -19,7 +19,20 @@ public class Evolution_of_trust
 
     public int x;
     public int a;
-    //public int Cooperate;
+    int choose_ai(int random_ai) {
+        
+        String ai_chooser;
+
+        //int num_of_ai = 2;
+        //int base_number = 1;
+        //int choosing_ai = num_of_ai;
+        //int choose_ai = (int)(Math.random() * choosing_ai) + base_number;
+
+
+        //return choose_ai;
+        
+    }
+    public int Cooperate;
     public int Cooperate_or_cheat;
     public int ai_Cooperate_or_cheat;//To allow use of manually using the ai through human hands for testing.
     //private int ai_Cooperate;
@@ -30,47 +43,35 @@ public class Evolution_of_trust
     //String str= sc.nextLine();
     //System.out.print("Excellent:"+str);
     ///}
-    //public Random_ai()
-    //{
+    //public random_ai() {
+
     //    int num_of_ai = 2;
     //    int base_number = 1;
     //    int choosing_ai = num_of_ai;
-     //   int choose_ai = (int)(Math.random() * choosing_ai) + base_number;
-        
-        
-    //return Random_ai;
+    //    int choose_ai = (int)(Math.random() * choosing_ai) + base_number;
+
+    //    return random_ai;
     //}
 
-    public Evolution_of_trust()
-    {
+    public Evolution_of_trust(){
         boolean Game = true; //Let's the Main game while function work.
-
         boolean cooperate = false;
         boolean cheat = false;
         boolean ai_cooperate = false;
         boolean ai_cheat = false;
-        
 
         //boolean help = false;
         //int num_of_ai = 2;
         //int base_number = 1;
-        //int choosing_ai = num_of_ai;
-        //int choose_ai = (int)(Math.random() * choosing_ai) + base_number;
-        //return (int)(Math.random() * choosing_ai)+ base_number;
-        //return int choose_ai;
-        
-        
-        
-            
-        
+        //int Select_ai = num_of_ai;
+        //int Select_ai = (int)(Math.random() * Select_ai) + base_number;
+        //return (int)(Math.random() * Select_ai)+ base_number;
+        //return int Select_ai;
 
-        
         boolean Kind_ai = false;
         boolean Evil_ai = true;
         //If all ai is turned on it uses the ai lowest in the code.
 
-        
-        
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
         int range = max - min + 0; // Defines how high or low The number of rounds will be.
@@ -102,14 +103,14 @@ public class Evolution_of_trust
             if (Evil_ai==true){
                 ai_cooperate=false;
                 ai_cheat=true;
-                
+
             }
             //System.out.println("ai_Cooperate_or_cheat");
             //String ai_Cooperate_or_cheat = sc.next();
             System.out.println("Round end");
 
             switch (Cooperate_or_cheat) {
-                
+
                 case "1":
                     //Cooperate_or_cheat = sc.next();
                     System.out.println("Cooperate");
@@ -117,13 +118,13 @@ public class Evolution_of_trust
                     cooperate=true;
 
                     break;
-                    
-                    case "2": //Lower case variant
+
+                case "2": //Lower case variant
                     System.out.println("Cheat");
                     cooperate=false;
                     cheat=true;
                     break;
-                
+
                 case "cooperate":
                     //Cooperate_or_cheat = sc.next();
                     System.out.println("Cooperate");
@@ -185,15 +186,15 @@ public class Evolution_of_trust
             //        ai_cooperate=true;
             //        break;
 
-             //   case "ai_Cooperate":
-             //       System.out.println("ai_Cooperate");
-             //       ai_cheat=false;
+            //   case "ai_Cooperate":
+            //       System.out.println("ai_Cooperate");
+            //       ai_cheat=false;
             //        ai_cooperate=true;
 
-             //       break;
+            //       break;
 
             //    case "ai_cheat": //Lower case variant
-             //       System.out.println("ai_Cheat");
+            //       System.out.println("ai_Cheat");
             //        ai_cooperate=false;
             //        ai_cheat=true;
             //        break;
@@ -204,9 +205,9 @@ public class Evolution_of_trust
             //        ai_cheat=true;
 
             //    default:
-                    //System.out.println("Type ai_cheat or ai_cooperate to make the choice for the ai."); // Tells player how to play
+            //System.out.println("Type ai_cheat or ai_cooperate to make the choice for the ai."); // Tells player how to play
             //}
-            
+
             points++;
             ai_points++;
 
@@ -239,7 +240,7 @@ public class Evolution_of_trust
             }
             if(cooperate&&ai_cheat==true){ //Player loses 1 point and ai gains 3 points.
                 points-=2;
-                ai_points+=2;
+                ai_points+=1;
 
                 System.out.println(points+" Your points");
                 System.out.println(ai_points+" Opponent's points.");
