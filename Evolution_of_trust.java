@@ -19,18 +19,20 @@ public class Evolution_of_trust
 
     public int x;
     public int a;
-    int choose_ai(int random_ai) {
-        
-        String ai_chooser;
+    int choose_ai() {
 
-        //int num_of_ai = 2;
-        //int base_number = 1;
+        //String ;
+
+        int num_of_ai = 2;
+        int base_number = 1;
         //int choosing_ai = num_of_ai;
         //int choose_ai = (int)(Math.random() * choosing_ai) + base_number;
+        int random_ai = (int)(Math.random() * num_of_ai) + base_number;
 
+        System.out.println(random_ai);
 
-        //return choose_ai;
-        
+        return random_ai;
+
     }
     public int Cooperate;
     public int Cooperate_or_cheat;
@@ -59,6 +61,28 @@ public class Evolution_of_trust
         boolean cheat = false;
         boolean ai_cooperate = false;
         boolean ai_cheat = false;
+        
+        boolean Kind_ai = false;
+        boolean Evil_ai = false;
+
+        System.out.println(choose_ai()+" Value of choose_ai");
+        
+        if (choose_ai()==1);{
+            Kind_ai = true;
+            Evil_ai = false;
+            
+        }
+        if (choose_ai()==2);{
+            Evil_ai = true;
+            Kind_ai = false;
+        }
+        //if (choose_ai=1());{
+        //    evil_ai = false;
+        //    Kind_ai = true;
+        //    
+        //}
+
+        
 
         //boolean help = false;
         //int num_of_ai = 2;
@@ -68,8 +92,7 @@ public class Evolution_of_trust
         //return (int)(Math.random() * Select_ai)+ base_number;
         //return int Select_ai;
 
-        boolean Kind_ai = false;
-        boolean Evil_ai = true;
+        
         //If all ai is turned on it uses the ai lowest in the code.
 
         int max = 10;//Max amount of rounds.

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Evolution_of_trust
-comment1.params=random_ai
-comment1.target=int\ choose_ai(int)
+comment1.params=
+comment1.target=int\ choose_ai()
 comment2.params=
 comment2.target=Evolution_of_trust()
 numComments=3
