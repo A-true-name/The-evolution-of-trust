@@ -4,7 +4,7 @@
  * @author (Hamish Kaufman)
  * @version (24/7/2023)
  */
-
+import java.io.*; 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -54,6 +54,7 @@ public class Evolution_of_trust
 
     //    return random_ai;
     //}
+    
 
     public Evolution_of_trust(){
         boolean Game = true; //Let's the Main game while function work.
@@ -61,28 +62,29 @@ public class Evolution_of_trust
         boolean cheat = false;
         boolean ai_cooperate = false;
         boolean ai_cheat = false;
-        
+
         boolean Kind_ai = false;
-        boolean Evil_ai = false;
+        //boolean Evil_ai = false;
 
         System.out.println(choose_ai()+" Value of choose_ai");
         
-        if (choose_ai()==1);{
+        if (choose_ai()==1){
             Kind_ai = true;
-            Evil_ai = false;
+            //Evil_ai = false;
             
+
         }
-        if (choose_ai()==2);{
-            Evil_ai = true;
-            Kind_ai = false;
-        }
+        //else (choose_ai()==2){
+            //Evil_ai = true;
+        //    Kind_ai = false;
+        //}
+
+        
         //if (choose_ai=1());{
         //    evil_ai = false;
         //    Kind_ai = true;
         //    
         //}
-
-        
 
         //boolean help = false;
         //int num_of_ai = 2;
@@ -91,50 +93,55 @@ public class Evolution_of_trust
         //int Select_ai = (int)(Math.random() * Select_ai) + base_number;
         //return (int)(Math.random() * Select_ai)+ base_number;
         //return int Select_ai;
+        String history_cooperate;
+        String history_cheat;
+        history_cooperate="cooperate";
+        history_cheat="cheat";
 
-        
         //If all ai is turned on it uses the ai lowest in the code.
-
         int max = 10;//Max amount of rounds.
         int min = 1;//Lowest amount of rounds
         int range = max - min + 0; // Defines how high or low The number of rounds will be.
-        int [] score = new int [20]; //Stores the points as a round goes on with each value in an array being the points for that round.
-        //points[0]=0;
-        //points[1]=0;
-        //points[2]=0;
-        int points=-0;
-        int ai_points=-0;
+        int [] points = new int [2]; //Stores the points as a round goes on.
+        points[0]=0;
+
+        int [] ai_points = new int [2]; //Stores the points as a round goes on.
+        ai_points[0]=0;
+
+        String [] History = new String [10]; //Records the actions a player took.
+
+        //System.out.println(History);
+        //int points=-0;
+        //int ai_points=-0;
         //System.out.println("Cooperate or cheat(Current 1 is cooperate and 2 to cheat");
-        //public int
         System.out.println("This is the prisoner's dilemna aganist a bot if you don't not know how to play prisoner's dilemna type 'cooperate' or 'cheat' aganist the ai");
 
         int round = (int)(Math.random() * range) + min;
 
-        // Output is different everytime this code is executed.
-        System.out.println(round+" rounds");//debug to tell amount of rounds.
-
+        System.out.println(round+" rounds left.");//debug to tell amount of rounds.
         while (Game) {// So game can always be running.
             Scanner sc= new Scanner(System.in);
             System.out.println("round begin");
             //System.out.println("player_Cooperate_or_cheat");
-            String Cooperate_or_cheat = sc.next();
             if (Kind_ai==true){
                 //System.out.println("ai_cooperate");
                 ai_cheat=false;
-                ai_cooperate=true;
+                //ai_cooperate=true;
             }
-            if (Evil_ai==true){
-                ai_cooperate=false;
+            if (Kind_ai==false){
+                //ai_cooperate=false;
                 ai_cheat=true;
 
             }
+            String Cooperate_or_cheat = sc.next();
+            
             //System.out.println("ai_Cooperate_or_cheat");
             //String ai_Cooperate_or_cheat = sc.next();
             System.out.println("Round end");
 
             switch (Cooperate_or_cheat) {
 
-                case "1":
+                case "c":
                     //Cooperate_or_cheat = sc.next();
                     System.out.println("Cooperate");
                     cheat=false;
@@ -142,7 +149,7 @@ public class Evolution_of_trust
 
                     break;
 
-                case "2": //Lower case variant
+                case "C": //Lower case variant
                     System.out.println("Cheat");
                     cooperate=false;
                     cheat=true;
@@ -191,7 +198,32 @@ public class Evolution_of_trust
                     //System.out.println("In this game you'll be up against an ai with a certain strategy it's your job to gain more points then them.");
                     //System.out.println("Type cheat or cooperate to choose"); // Tells player how to play
 
-            }// End of switch
+            }
+            
+
+            //Scanner myScan = new Scanner(System.in);
+            if (cooperate==true){
+
+                History[round]="Cooperate";
+                System.out.println("History of actions taken below ");
+                for (int i = 1; i <= 9; i++) { 
+                    System.out.print(History[i] + " "); 
+                }
+
+            }
+
+            if (cooperate==false){
+
+                History[round]="Cheat";
+                System.out.print("History of actions taken below ");
+                for (int i = 1; i <= 9; i++) { 
+                    System.out.print(History[i] + " "); 
+                }
+
+            }
+            
+            System.out.println(" "); //Makes sure the history and your points line don't print on the same line. 
+
             //while (Kind_ai==true) {
             //    if (cooperate==true) {
             //       ai_cooperate = true;
@@ -231,42 +263,45 @@ public class Evolution_of_trust
             //System.out.println("Type ai_cheat or ai_cooperate to make the choice for the ai."); // Tells player how to play
             //}
 
-            points++;
-            ai_points++;
+            //points[0]++;
+            //ai_points[0]++;
 
-            if(cooperate&&ai_cooperate==true){ //Both get even amount.
-                points+=1;
-                ai_points+=1;
+            if(cooperate&&ai_cheat==false){ //Both get even amount.
+                points[0]+=1;
+                ai_points[0]+=1;
 
-                System.out.println(points+" Your points");
-                System.out.println(ai_points+" Opponent's points.");
+                System.out.println(points[0]+" Your points");
+                System.out.println(ai_points[0]+" Opponent's points.");
                 cooperate=false; //resets back to false to avoid problems for if it were to stay true.
-                ai_cooperate=false;
+                //ai_cheat=false;
             }
             if(cheat&&ai_cheat==true){ //No one gains anything
-                System.out.println(points+" Your points");
-                System.out.println(ai_points+" Opponent's points.");
-                points-=1;
-                ai_points-=1;
+                System.out.println(points[0]+" Your points");
+                System.out.println(ai_points[0]+" Opponent's points.");
+                //points[0]=0;
+                //ai_points[0]=0;
+
+                //cheat=false;
+                //ai_cheat=false;
                 //No one gains anything despite this code saying it will remove one.
 
             }
-            if(cheat&&ai_cooperate==true){ //Player gains more and ai loses 1 point.
-                points+=1;
-                ai_points-=2;
+            if(cheat&&ai_cheat==false){ //Player gains more and ai loses 1 point.
+                points[0]+=1;
+                ai_points[0]-=2;
 
-                System.out.println(points+" Your points");
-                System.out.println(ai_points+" Opponent's points.");
+                System.out.println(points[0]+" Your points");
+                System.out.println(ai_points[0]+" Opponent's points.");
                 cheat=false; //resets back to false to avoid problems for if it were to stay true.
                 ai_cooperate=false;
 
             }
             if(cooperate&&ai_cheat==true){ //Player loses 1 point and ai gains 3 points.
-                points-=2;
-                ai_points+=1;
+                points[0]-=2;
+                ai_points[0]+=1;
 
-                System.out.println(points+" Your points");
-                System.out.println(ai_points+" Opponent's points.");
+                System.out.println(points[0]+" Your points");
+                System.out.println(ai_points[0]+" Opponent's points.");
                 cooperate=false; //resets back to false to avoid problems for if it were to stay true.
                 ai_cheat=false;
 
@@ -282,4 +317,3 @@ public class Evolution_of_trust
         }
     }
 }
-
